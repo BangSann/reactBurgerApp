@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path :"/aboutUs",
+    path :"https://react-burger-app-psi.vercel.app/aboutUs",
     element: <AboutUs/>
   },
   {
