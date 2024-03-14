@@ -5,12 +5,12 @@ const Home = () => {
         {
           childern : "Order",
           varian : "primary",
-          link : "./order"
+          link : "/order"
         },
         {
           childern : "About us",
           varian : "secondary",
-          link : "./aboutUs"
+          link : "/aboutUs"
         },
         {
           childern : "Contact",
