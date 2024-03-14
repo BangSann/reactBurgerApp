@@ -20,7 +20,7 @@ const AboutUs = () => {
             taste and versatility.
           </p>
           <div>
-            <Button childern={"Back To Home"} variant="primary" link={"./"} />
+            <Button childern={"Back To Home"} variant="primary" link={"/"} />
           </div>
         </div>
       </div>
