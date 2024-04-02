@@ -1,3 +1,6 @@
+import { showModal } from "../../store/slice/modal.slice";
+import { useDispatch } from "react-redux";
+
 const Header = ({ selectedIngredients, reset }) => {
   const totalHarga = () => {
     const ingredientPrice = selectedIngredients.map((item) => {
@@ -8,26 +11,30 @@ const Header = ({ selectedIngredients, reset }) => {
     }, 0);
   };
 
+  const dispatch = useDispatch();
+
   return (
-    <section class="flex justify-between p-5">
+    <section className="flex justify-between p-5">
       <div>
         <h1>
           Total : Rp.
           <span>{totalHarga()}</span>
         </h1>
       </div>
-      <div class="flex gap-3">
-        <a href="./order?done=true">
+      <div className="flex gap-3">
+        <a>
           <button
-            class={`p-2 rounded ${
+            className={`p-2 rounded ${
               selectedIngredients.length == 0 ? "btn-disabled" : "primary"
             }`}
+            onClick={() => dispatch(showModal())}
+            disabled={selectedIngredients.length === 0 ? true : false}
           >
             Order Burger
           </button>
         </a>
         <button
-          class={`p-2 bg-red-500 text-white rounded border hover:bg-white hover:text-red-500 hover:border hover:border-red-500 ${
+          className={`p-2 bg-red-500 text-white rounded border hover:bg-white hover:text-red-500 hover:border hover:border-red-500 ${
             selectedIngredients.length == 0 ? "hidden" : ""
           }`}
           onClick={() => reset()}

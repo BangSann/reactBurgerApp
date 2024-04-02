@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './page/home'
+import { useDispatch, useSelector } from "react-redux";
+import "./App.css";
+import Home from "./page/home";
 
 function App() {
-
   return (
     <>
-      <Home/>
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
