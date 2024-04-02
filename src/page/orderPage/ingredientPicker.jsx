@@ -7,7 +7,7 @@ const IngredientPicker = ({
   return (
     <section>
       <div
-        class={`px-5 py-2 text-center rounded-xl cursor-pointer ${
+        className={`px-5 py-2 text-center rounded-xl cursor-pointer ${
           selectedIngredient.length == 10 ? "btn-disabled" : "primary"
         }`}
         onClick={() => selectIngredient({ nama: nama, harga: harga })}
